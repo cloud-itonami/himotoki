@@ -24,7 +24,7 @@
                 needs Council Lv6+ + operator + a member/actor signature, §1.12 / G11).
 
   Self-contained. Stdlib only. Deterministic — the seed grows on the mesh, not here."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def disclaimer
   "【開示請求ミラー / disclosure-filer map — consent-bound, own-data-only, 第三者PII非掲載, 非断定】")

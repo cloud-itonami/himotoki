@@ -13,7 +13,7 @@
     G10 outbound-gated (live dispatch needs the operator gate).
 
   Maps use string keys so canonical EDN and JSON wire projections have identical shapes."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.edn :as edn])))
 
 (def MAX-BATCH 5)
@@ -23,11 +23,11 @@
 (defn is-dsar
   "DSAR (own-data) vs FOIA (public records), inferred from the regime."
   [target]
-  (let [regime (str/lower-case (str (get target "regime" "")))]
+  (let [regime (str/lower (str (get target "regime" "")))]
     (cond
       (some #(str/starts-with? regime %) dsar-regime-prefixes) true
       (or (str/includes? regime "foia") (str/includes? regime "情報公開") (str/ends-with? regime "-foia")) false
-      :else (boolean (some (fn [r] (let [rl (str/lower-case (str r))]
+      :else (boolean (some (fn [r] (let [rl (str/lower (str r))]
                                      (some #(str/starts-with? rl %) dsar-regime-prefixes)))
                            (get target "altRegimes" []))))))
 
@@ -42,7 +42,7 @@
       (throw (ex-info "G4: every request must identify the true requester DID (no pretext)" {})))
     ;; G4 — no pretext/sockpuppet/alias field may be supplied.
     (doseq [k (keys member)]
-      (let [kl (str/lower-case (str k))]
+      (let [kl (str/lower (str k))]
         (when (some #(str/includes? kl %) forbidden-pretext-fields)
           (throw (ex-info (str "G4: pretext field '" k "' is unrepresentable; the true requester must file") {})))))
     (let [dsar (is-dsar target)]
