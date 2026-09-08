@@ -1,6 +1,6 @@
 (ns himotoki.registry-test
   (:require [clojure.edn :as edn]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is]]))
 
 (def registry (edn/read-string (slurp "registry/targets.seed.edn")))
@@ -33,7 +33,7 @@
 
 (deftest constitutional-boundary-is-explicit
   (is (every? #(not (str/blank? (get % "notes" ""))) targets))
-  (let [corpus (str/lower-case (pr-str registry))]
+  (let [corpus (str/lower (pr-str registry))]
     (is (str/includes? corpus "own-data-only"))
     (is (str/includes? corpus "unverified-seed"))
     (is (or (str/includes? corpus "lawful-channel")

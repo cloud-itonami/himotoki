@@ -7,7 +7,7 @@
   dispatch, G10 outbound-gated."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [himotoki.methods.request :as req]))
 
 ;; Resolve the canonical registry relative to THIS file.

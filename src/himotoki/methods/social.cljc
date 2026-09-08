@@ -30,7 +30,7 @@
   the growth (live signing/broadcast) happens actor-side on the mesh, not here.
 
   Clojure note: private helpers are defined BEFORE their first use (no forward refs)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def DISCLAIMER
   (str "【開示請求ミラー / disclosure-filer map — consent-bound, own-data-only, 第三者PII非掲載, 非断定】 "
