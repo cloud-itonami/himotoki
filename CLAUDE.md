@@ -78,7 +78,7 @@ The seed:
 
 - **did-web registration** — `50-infra/etzhayyim-did-web/public/actor/himotoki/{did,profile}.json`
   (`verificationMethod: []` — no server-minted key, did:web trust root = TLS; the
-  `#xrpc-libp2p` peer multiaddr is assigned at `bb murakumo deploy` time when `wasmCid` is set).
+  `#xrpc-libp2p` peer multiaddr is assigned at `kbb -M:murakumo deploy` time when `wasmCid` is set).
 - **social_post membrane** — `src/himotoki/cells/social_post/state_machine.cljk`: DRAFTS a record into a
   **dry-run** post ONLY if ≥2 public statute/target-registry/primary-source citations (G5) +
   non-adjudicating mirror with the disclaimer (G4) + `server_held_key` false (no-server-key) +
@@ -107,7 +107,7 @@ leash (ADR-2606111400), and signs its own posts. The server never signs. R0 = dr
 only; live broadcast is Council Lv6+ + operator + member/actor-signature gated (§1.12 / G11).
 
 ```bash
-bb run_tests.cljk                                            # canonical repository suite
+kbb run_tests.cljk                                            # canonical repository suite
 # operator step (zero-knowledge — needs MURAKUMO_OPERATOR_SEED + Tailscale):
 #   bb murakumo deploy kotoba.app.edn <node>
 ```
