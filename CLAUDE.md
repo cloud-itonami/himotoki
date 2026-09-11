@@ -79,13 +79,13 @@ The seed:
 - **did-web registration** — `50-infra/etzhayyim-did-web/public/actor/himotoki/{did,profile}.json`
   (`verificationMethod: []` — no server-minted key, did:web trust root = TLS; the
   `#xrpc-libp2p` peer multiaddr is assigned at `bb murakumo deploy` time when `wasmCid` is set).
-- **social_post membrane** — `src/himotoki/cells/social_post/state_machine.cljc`: DRAFTS a record into a
+- **social_post membrane** — `src/himotoki/cells/social_post/state_machine.cljk`: DRAFTS a record into a
   **dry-run** post ONLY if ≥2 public statute/target-registry/primary-source citations (G5) +
   non-adjudicating mirror with the disclaimer (G4) + `server_held_key` false (no-server-key) +
   status `dry-run`. A `published` request REFUSES. Verified under `bb`: `<2 sources /
   server-key / published → refused`, valid → `drafted` with `:post/status :dry-run`,
   `:post/server-held-key false`, `:post/own-data-only true`.
-- **publication projection** — `src/himotoki/methods/social.cljc`: projects himotoki's HISTORY (AGGREGATE,
+- **publication projection** — `src/himotoki/methods/social.cljk`: projects himotoki's HISTORY (AGGREGATE,
   own-data-only filed-request + disclosure-received records — `draft-filing-post` /
   `draft-disclosure-post`, no requester identity, no envelope contents) + PROCEDURES (the
   DSAR/FOIA disclosure procedures: root-of-right statute, coded target registry, how a member
@@ -107,7 +107,7 @@ leash (ADR-2606111400), and signs its own posts. The server never signs. R0 = dr
 only; live broadcast is Council Lv6+ + operator + member/actor-signature gated (§1.12 / G11).
 
 ```bash
-bb run_tests.clj                                            # canonical repository suite
+bb run_tests.cljk                                            # canonical repository suite
 # operator step (zero-knowledge — needs MURAKUMO_OPERATOR_SEED + Tailscale):
 #   bb murakumo deploy kotoba.app.edn <node>
 ```
