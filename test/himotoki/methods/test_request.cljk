@@ -6,14 +6,14 @@
   G6 PII-as-encrypted-envelope (never plaintext), G8 no mass-filing, G14 verify-before-
   dispatch, G10 outbound-gated."
   (:require [kotoba.test :refer [deftest is run-tests]]
-            [clojure.java.io :as io]
+            [kotoba.io :as io]
             [kotoba.lang.text :as str]
             [himotoki.methods.request :as req]))
 
 ;; Resolve the canonical registry relative to THIS file.
 (def ^:private this-file *file*)
 (defn- actor-root []
-  (-> this-file io/file .getAbsoluteFile .getParentFile .getParentFile .getParentFile .getParentFile))
+  (-> this-file io/file io/absolute-file io/parent-file io/parent-file io/parent-file io/parent-file))
 (def ^:private reg (req/load-registry (str (io/file (actor-root) "registry" "targets.seed.edn"))))
 (def ^:private member
   {"requesterDid" "did:web:etzhayyim.com:member:alice" "ownDataOnly" true
