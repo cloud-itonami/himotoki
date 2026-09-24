@@ -14,7 +14,7 @@
 
   Maps use string keys so canonical EDN and JSON wire projections have identical shapes."
   (:require [kotoba.lang.text :as str]
-            #?(:clj [clojure.edn :as edn])))
+            #?(:clj [kotoba.lang.edn :as edn])))
 
 (def MAX-BATCH 5)
 (def ^:private dsar-regime-prefixes ["gdpr" "ccpa" "cpra" "appi" "lgpd" "pipeda" "pdpa" "pipl"])
