@@ -5,7 +5,7 @@
   Proves every charter gate fires: G3 own-data-only DSAR, G4 true-requester/no-pretext,
   G6 PII-as-encrypted-envelope (never plaintext), G8 no mass-filing, G14 verify-before-
   dispatch, G10 outbound-gated."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
             [kotoba.lang.text :as str]
             [himotoki.methods.request :as req]))

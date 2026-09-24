@@ -2,7 +2,7 @@
   (:require [cheshire.core :as json]
             [clojure.edn :as edn]
             [clojure.java.io :as io]
-            [clojure.test :refer [deftest is]]))
+            [kotoba.test :refer [deftest is]]))
 
 (deftest canonical-repository-shape
   (doseq [path ["manifest.edn" "identity.edn" "dependencies.edn"

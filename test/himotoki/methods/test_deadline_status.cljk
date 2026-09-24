@@ -7,7 +7,7 @@
   registry-sourced deadline (himotoki tracks, chigiri owns the law; nothing statutory hardcoded).
   Deterministic (elapsed-days supplied); operational, not legal advice (G5/UPL)."
   (:require [himotoki.methods.request :as r]
-            [clojure.test :refer [deftest is run-tests]]))
+            [kotoba.test :refer [deftest is run-tests]]))
 
 (def ^:private req {"statutoryDeadlineDays" 30 "extensionDays" 60})  ; e.g. a GDPR-shaped request
 

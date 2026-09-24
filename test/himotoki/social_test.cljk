@@ -1,5 +1,5 @@
 (ns himotoki.social-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [himotoki.methods.social :as social]
             [himotoki.cells.social-post.state-machine :as machine]))
 
