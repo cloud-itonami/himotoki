@@ -128,7 +128,7 @@
     }
   },
   "roadmap": [
-    {"phase": "R0", "date": "2026-05-30", "scope": "Scaffold only. 7 cells path-reserved. 5 Lexicon skeletons. Target-registry seed (6 entries, all unverified-seed). manifest + README + CLAUDE.md. NO dispatch.", "murakumoFleet": "No deployment", "gate": "ADR-2605302130 (PROPOSED)"},
+    {"phase": "R0", "date": "2026-05-30", "scope": "Scaffold only. 7 cells path-reserved. 5 Lexicon skeletons. Target-registry seed (6 entries, all unverified-seed). manifest + README + AGENTS.md. NO dispatch.", "murakumoFleet": "No deployment", "gate": "ADR-2605302130 (PROPOSED)"},
     {"phase": "R1", "date": "post-Bootstrap-Council + ≥1 Council Lv6+ ratify", "scope": "target_registry live + maintainer-verification flow (G14); request_intake + compose build disclosureRequest artifacts from chigiri templates. NO live dispatch (artifacts only).", "murakumoFleet": "reuben", "gate": "Council Lv6+ ≥3"},
     {"phase": "R2", "date": "post-R1 + 30-day public comment", "scope": "FOIA-only live dispatch (public-record requests to public organs; non-PII) + deadline_tracker + response_intake for public records; disclosureTarget entries maintainer-verified.", "murakumoFleet": "reuben + gad", "gate": "Council Lv6+ ≥4 + 30-day public comment"},
     {"phase": "R3", "date": "post-R2 + Council Lv7+ unanimity", "scope": "DSAR live dispatch (member-consent + DID-bound; private controllers) + encrypted PII response custody + appeal_route; named-controller targets council-verified; multi-jurisdiction (GDPR/CCPA/FOIA).", "murakumoFleet": "Full 10-node fleet", "gate": "Council Lv7+ unanimity"}

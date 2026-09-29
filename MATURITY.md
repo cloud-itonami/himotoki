@@ -17,7 +17,7 @@ honest framing: できていないことは「未」と明記する。
 | # | 項目 | 状態 | 完了イテレーション |
 |---|---|---|---|
 | 1 | ADR-2605302130 (master) | ✅ | init |
-| 2 | manifest.jsonld + README + CLAUDE.md | ✅ | init |
+| 2 | manifest.jsonld + README + AGENTS.md | ✅ | init |
 | 3 | disclosure-target registry seed (unverified-seed) | ✅ | init |
 | 4 | DSAR/FOIA 主要 data-controller 窓口 (JP/US 中心) | ✅ | init |
 | 5 | **worldwide multi-jurisdiction 拡張** (US/EU/UK-CW/INTL-ROW) | ✅ | **iter-1** |
